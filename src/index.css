@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,7 +12,7 @@ body {
   background-attachment: fixed;
 }
 
-/* Code-like Cursor Blink */
+/* Global Animations and Utilities */
 @keyframes code-cursor-blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -24,11 +24,41 @@ body {
   @apply text-brand-300;
 }
 
-/* Tech-inspired Hover Effects */
 .tech-hover {
   @apply transition-all duration-300 ease-in-out;
 }
 
 .tech-hover:hover {
   @apply transform scale-105 shadow-lg;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  @apply w-2 bg-neutral-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-300 rounded-full;
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gradient Text Utility */
+.bg-gradient-cosmic {
+  background: linear-gradient(45deg, #4C8BF5, #10B981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Funky Hover Effect */
+.funky-hover {
+  transition: all 0.3s ease;
+}
+
+.funky-hover:hover {
+  transform: scale(1.05) rotate(2deg);
+  @apply shadow-lg;
 }
