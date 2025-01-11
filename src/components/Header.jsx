@@ -41,11 +41,8 @@ const Header = () => {
     () => [
       "React",
       "Vue",
-      "TypeScript",
       "NextJS",
       "NodeJS",
-      "MaterialUI",
-      "Tailwind CSS",
     ],
     []
   );
