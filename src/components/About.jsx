@@ -1,41 +1,42 @@
-import { motion } from 'framer-motion';
-import DefaultProfileIcon from '../assets/react.svg';
+import { motion } from "framer-motion";
+import DefaultProfileIcon from "../assets/react.svg";
 
 const About = () => {
   const technologies = [
-    { name: 'React', color: 'text-cyan-400' },
-    { name: 'TypeScript', color: 'text-blue-500' },
-    { name: 'Node.js', color: 'text-green-500' },
-    { name: 'GraphQL', color: 'text-pink-500' },
-    { name: 'Docker', color: 'text-blue-600' },
-    { name: 'AWS', color: 'text-orange-500' }
+    { name: "React", color: "text-cyan-400" },
+    { name: "TypeScript", color: "text-blue-500" },
+    { name: "Node.js", color: "text-green-500" },
+    { name: "GraphQL", color: "text-pink-500" },
+    { name: "Docker", color: "text-blue-600" },
+    { name: "AWS", color: "text-orange-500" },
   ];
 
   const companyProjects = [
     {
-      name: 'Axxess Home Care',
+      name: "Axxess Home Care",
       description:
-        'Cloud-based software for home care solutions used by over 1000 agencies',
-      technologies: ['React.js', 'NextJS', 'Tailwind CSS', 'MaterialUI']
+        "Cloud-based software for home care solutions used by over 1000 agencies",
+      technologies: ["React.js", "NextJS", "Tailwind CSS", "MaterialUI"],
     },
     {
       name: "Wolken's Desk",
-      description: 'Enterprise service management platform',
-      technologies: ['React', 'Redux', 'MaterialUI']
-    }
+      description: "Enterprise service management platform",
+      technologies: ["React", "Redux", "MaterialUI"],
+    },
   ];
 
   const personalProjects = [
     {
-      name: 'Performance Analytics Dashboard',
-      description: 'Real-time web performance monitoring application',
-      technologies: ['React', 'TypeScript', 'D3.js', 'GraphQL']
+      name: "Performance Analytics Dashboard",
+      description: "Real-time web performance monitoring application",
+      technologies: ["React", "TypeScript", "D3.js", "GraphQL"],
     },
     {
-      name: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with advanced state management',
-      technologies: ['React', 'Redux', 'Node.js', 'MongoDB']
-    }
+      name: "E-Commerce Platform",
+      description:
+        "Full-stack e-commerce solution with advanced state management",
+      technologies: ["React", "Redux", "Node.js", "MongoDB"],
+    },
   ];
 
   return (
