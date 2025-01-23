@@ -38,12 +38,7 @@ const Header = () => {
   }, []);
 
   const technologies = React.useMemo(
-    () => [
-      "React",
-      "Vue",
-      "NextJS",
-      "NodeJS",
-    ],
+    () => ["React", "Vue", "NextJS", "NodeJS"],
     []
   );
 

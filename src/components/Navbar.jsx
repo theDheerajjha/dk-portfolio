@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -12,31 +12,41 @@ const Navbar = () => {
       setIsScrolled(scrollPosition > 50);
 
       // Determine active section
-      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
+      const sections = [
+        "home",
+        "about",
+        "skills",
+        "projects",
+        "experience",
+        "contact",
+      ];
       sections.forEach((section) => {
         const element = document.getElementById(section);
         if (element) {
           const top = element.offsetTop;
           const height = element.offsetHeight;
 
-          if (scrollPosition >= top - 100 && scrollPosition < top + height - 100) {
+          if (
+            scrollPosition >= top - 100 &&
+            scrollPosition < top + height - 100
+          ) {
             setActiveSection(section);
           }
         }
       });
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Contact', href: '#contact' }
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Experience", href: "#experience" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const toggleMobileMenu = () => {
@@ -51,7 +61,9 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-neutral-900/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+          isScrolled
+            ? "bg-neutral-900/90 backdrop-blur-md shadow-lg"
+            : "bg-transparent"
         }`}
       >
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -73,17 +85,17 @@ const Navbar = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className={`relative group transition-colors duration-300 ${
-                  activeSection === item.name.toLowerCase().replace(' ', '')
-                    ? 'text-brand-300'
-                    : 'text-neutral-300 hover:text-brand-300'
+                  activeSection === item.name.toLowerCase().replace(" ", "")
+                    ? "text-brand-300"
+                    : "text-neutral-300 hover:text-brand-300"
                 }`}
               >
                 {item.name}
                 <span
                   className={`absolute bottom-0 left-0 h-0.5 bg-brand-300 transition-all duration-300 ${
-                    activeSection === item.name.toLowerCase().replace(' ', '')
-                      ? 'w-full'
-                      : 'w-0 group-hover:w-full'
+                    activeSection === item.name.toLowerCase().replace(" ", "")
+                      ? "w-full"
+                      : "w-0 group-hover:w-full"
                   }`}
                 ></span>
               </motion.a>
@@ -154,21 +166,21 @@ const Navbar = () => {
                     y: 0,
                     transition: {
                       delay: index * 0.1,
-                      type: 'spring',
-                      stiffness: 120
-                    }
+                      type: "spring",
+                      stiffness: 120,
+                    },
                   }}
                   exit={{
                     opacity: 0,
                     y: 50,
                     transition: {
-                      delay: (navItems.length - index) * 0.1
-                    }
+                      delay: (navItems.length - index) * 0.1,
+                    },
                   }}
                   className={`text-2xl transition-colors duration-300 ${
-                    activeSection === item.name.toLowerCase().replace(' ', '')
-                      ? 'text-brand-300'
-                      : 'text-neutral-300 hover:text-brand-300'
+                    activeSection === item.name.toLowerCase().replace(" ", "")
+                      ? "text-brand-300"
+                      : "text-neutral-300 hover:text-brand-300"
                   }`}
                 >
                   {item.name}
